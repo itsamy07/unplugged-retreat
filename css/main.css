@@ -177,6 +177,8 @@ footer .social-icons p {
 footer .copyright {
   margin:20px 0;
 }
+
+
 /****Homepage Mobile Styles****/
 
 /**Hero Area**/
@@ -186,6 +188,7 @@ footer .copyright {
   justify-content: center;
   flex-flow: row wrap;
 } 
+
 
 /**Aside**/
 
@@ -197,7 +200,9 @@ aside {
 }
 
 aside .content-wrapper {
+  width: 100%;
   margin-top:20px;
+  justify-content: center;
 }
 
 aside .form {
@@ -371,11 +376,7 @@ aside .form {
   clear: both;
 }
 
-/* ==========================================================================
-   EXAMPLE Media Queries for Responsive Design.
-   These examples override the primary ('mobile first') styles.
-   Modify as content requires.
-   ========================================================================== */
+/* ===== Media Queries for Responsive Design.===== */
 
 @media only screen and (min-width: 48em) {
   /**Tablet Styles**/
@@ -393,10 +394,280 @@ aside .form {
   }
 
   header .content-wrapper {
-    width: 100%;
+    width: 80%;
     justify-content: space-between;
   }
 
+  header figure {
+    width:30px;
+  }
+
+  header nav {
+    width: 20%;
+  }
+
+  header nav ul {
+    justify-content: space-between;
+  }
+
+  .header-divider {
+    display: none;
+  }
+
+  /**Hero Area**/
+
+  .hero-area {
+    min-height: 600px;
+  }
+
+  .hero-area .content-wrapper {
+    width: 80%;
+  }
+
+  .hero-area h1 {
+    margin: 0;
+  }
+
+  /*Aside Area*/
+
+aside .content-wrapper {
+  margin: 50px 0;
+  display: flex;
+  justify-content: space-between;
+  flex-flow: row wrap;
+}
+aside .content-wrapper .form-description,
+aside .content-wrapper .form {
+    width: 40%;
+    margin: 0;
+  }
+
+  /*Features Area*/
+
+  .features article {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column wrap;
+    flex-basis: 50%;
+  }
+
+  .features .features-item-description {
+    width: 60%
+  }
+
+  .features h2 {
+    margin-bottom: 20px;
+  }
+
+  /*Reviews Area */
+
+  .reviews article {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .reviews article figure,
+  .reviews article div {
+    width: 50%;
+  }
+
+  .reviews h2 {
+    width: 85%;
+    margin: 0 0 40px 0;
+  }
+
+  .reviews h3 {
+    width: 75%;
+    margin: 0;
+  }
+
+  /**Footer Area**/
+
+  footer .content-wrapper {
+    width: 65%;
+    margin: 100px 0 0;
+  }
+
+  footer .footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    margin: 0 0 80px 0;
+  }
+
+  .contact {
+    margin-bottom: 0px;
+  }
+
+  footer h4 {
+  margin-bottom: 40px;
+  }
+
+  footer .social-icons {
+    width: 30%;
+    justify-content: space-between;
+   }
+  
+  footer .copyright {
+    width: 100%;
+  }
+
+  /**About Page**/
+
+  .mission-content{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 20px;
+  }
+
+  .mission-content p {
+    width: 45%;
+  }
+
+  .map figure {
+    padding-bottom: 45%;
+  }
+
+  .contact-section .content-wrapper h2 {
+    width: 80%;
+  }
+
+  .contact-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
+  /**FAQ Page**/
+
+  .content-wrapper {
+    justify-content: space-between;
+  }
+
+  .content {
+     flex-basis: 45%;
+  }  
+
+
+  @media only screen and (min-width:1200px) {
+    /*Desktop styles here*/
+  
+    header {
+      padding: 15px 0;;
+    }
+    
+    .content-wrapper {
+      max-width: 960px;
+    }
+  
+    /* Hero */ 
+    .hero-area h1 {
+      width: 70%;
+  }
+  
+    /* Aside */
+    aside .content-wrapper {
+      justify-content: space-around;
+    }
+  
+    aside .content-wrapper .form-description,
+    aside .content-wrapper .form {
+      width: 30%;
+      margin: 0;
+    }
+  
+    /* Features */
+  
+    .features h2 {
+      width: 90%;
+      margin-bottom: 20px;
+    }
+  
+    .features article {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-flow:column wrap;
+      flex-basis: 33%;
+    }
+
+    .features-item-description {
+      width: 60%;
+    }
+    
+    /* Reviews */
+    .reviews article {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .reviews article div {
+      width: 40%;
+    }
+
+    .reviews h2 {
+      width: 85%;
+      margin: 0 0 40px 0;
+      padding: 50px;
+    }
+    
+    .reviews h3 {
+      width: 75%;
+      margin: 0%;
+    }
+  
+    .reviews article div {
+      width: 42%; 
+    }
+
+    /** Footer**/
+
+    footer .content-wrapper {
+      width: 65%;
+      margin: 100px 0 0;
+
+    } 
+
+    .contact {
+      margin-bottom: 0;
+    }
+
+    footer h4 {
+      margin-bottom: 40px;
+    }
+
+    .social-icons {
+      width: 60%;
+      justify-content: space-between;
+    }
+
+    .copyright {
+      width: 100%;
+    }
+
+
+    /* =====About Page ====== */
+  
+    .mission h2,
+    .contact-section .content-wrapper h2 {
+        width: 95%;
+    }
+
+    .map figure {
+      padding-bottom: 40%;
+    }
+
+    
+    /* ======FAQ Page===== */
+    .faq h2 {
+      width: 100%;
+    }
+  
+  }
+  
 
 @media print,
   (-webkit-min-device-pixel-ratio: 1.25),
@@ -477,6 +748,5 @@ aside .form {
   h2,
   h3 {
     page-break-after: avoid;
-  }
 }
 
