@@ -135,7 +135,6 @@ figure {
   margin: 0;
 }
 
-
 .content-wrapper {
   width:90%;
   margin: 50px 0;
@@ -149,6 +148,7 @@ header {
   align-items: center;
   flex-flow: row wrap;
   padding: 15px 0;
+  background-color: #202322;
 }
 
 header .content-wrapper {
@@ -171,6 +171,7 @@ header figure {
   width: 100%;
   height:1px;
   margin:10px 0 20px 0;
+  background-color: #3a3a3a;
 }
 
 header nav {
@@ -202,6 +203,7 @@ footer {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  background-color: #202322;
 }
 
 footer .content-wrapper {
@@ -227,6 +229,7 @@ footer .social-icons {
   display:flex;
   justify-content: space-around;
   align-items: center;
+  background-color: #527158;
 }
 
 footer .social-icons p {
@@ -282,6 +285,28 @@ aside .form-description p {
   margin: 0;
 }
 
+input[type=text] {
+  box-sizing: border-box;
+  width: 100%;
+  color: #2a423a;
+  font-style: italic;
+  padding: 1em;
+}
+ 
+input[type=button] {
+  width: 100%;
+  padding: 20px 0;
+  margin-top: 20px;
+  background-color: #2a423a;
+  font-family: 'Poppins', Helvetica, Arial, sans-serif;
+  font-weight: 500;
+  font-size: 1.125em;
+  color: #e2e3ed;
+  border: none;
+  text-align: center;
+  text-transform: uppercase;
+}
+
 
 /**Features**/
 
@@ -320,7 +345,9 @@ aside .form-description p {
   display: flex;
   justify-content: center;
   flex-flow: row wrap;
+  background-color: #2a423a;
 } 
+
 
 .reviews h2 {
   margin-bottom: 40px;
@@ -338,6 +365,7 @@ aside .form-description p {
   justify-content: center;
   align-items: center;
   flex-flow: row wrap;
+  background-color: #527158;
 }
 
 .contact-section {
@@ -345,6 +373,7 @@ aside .form-description p {
   justify-content: center;
   align-items: center;
   flex-flow: row wrap;
+  background-color: #2a423a;
 }
 
 .contact-section h2 {
@@ -364,6 +393,7 @@ aside .form-description p {
   justify-content: center;
   align-items: center;
   flex-flow: row wrap;
+  background-color: #527158;
 }
 
 .faq .content-wrapper {
@@ -386,6 +416,7 @@ aside .form-description p {
 .faq-content h4 {
   line-height: 1.333;
 }
+
 /* ==========================================================================
    Helper classes
    ========================================================================== */
