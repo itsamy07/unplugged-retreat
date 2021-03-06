@@ -93,11 +93,13 @@ body {
   font-size: 1em;
   font-family: 'Open Sans', sans-serif;
   text-align: left;
+  color: #e2e3ed;
 }
 
 h2 {
   font-family: 'Poppins', sans-serif;
   font-size: 1.875em;
+  font-weight: 500;
 }
 
 h3,
@@ -105,6 +107,7 @@ h4 {
   font-family: 'Poppins', sans-serif;
   margin: 20px 0 0 0;
   font-size:1.125em;  
+  font-weight: 500;
 }
 
 p {
@@ -120,6 +123,19 @@ a {
   color: #e2e3ed;
 }
 
+address {
+  font-style: normal;
+}
+
+img{
+  width: 100%;
+}
+
+figure {
+  margin: 0;
+}
+
+
 .content-wrapper {
   width:90%;
   margin: 50px 0;
@@ -131,6 +147,7 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-flow: row wrap;
   padding: 15px 0;
 }
 
@@ -153,7 +170,7 @@ header figure {
 .header-divider {
   width: 100%;
   height:1px;
-  margin:10px 0;
+  margin:10px 0 20px 0;
 }
 
 header nav {
@@ -162,6 +179,9 @@ header nav {
   flex-flow: row wrap;
   justify-content: space-around;
   width: 60%;
+  font-size:1.125em;
+  font-weight: 700;
+  text-transform: uppercase;
 }
 
 header nav ul{
@@ -171,12 +191,17 @@ header nav ul{
   padding: 0;
 }
 
+header nav ul li {
+  font-size: 1.125em;
+}
+
 /* -----Footer Styles ------ */
 
 footer {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
 }
 
 footer .content-wrapper {
@@ -191,6 +216,7 @@ footer .content {
 
 footer .p{
   margin:0;
+  line-height: 1.2px;
 }
 
 footer .contact {
@@ -207,7 +233,7 @@ footer .social-icons p {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 40px;
+  font-size: 1.3125em;
 }
 
 footer .copyright {
@@ -225,6 +251,13 @@ footer .copyright {
   flex-flow: row wrap;
 } 
 
+.hero-area h1 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 2.25em;
+  font-weight: 500;
+  line-height: 1.2em;
+}
+
 
 /**Aside**/
 
@@ -232,7 +265,7 @@ aside {
   display:flex;
   justify-content: center;
   align-items: center;
-  flex-flow: word wrap;
+  flex-flow: row wrap;
 }
 
 aside .content-wrapper {
@@ -244,6 +277,11 @@ aside .content-wrapper {
 aside .form {
   margin-top: 30px;
 }
+
+aside .form-description p {
+  margin: 0;
+}
+
 
 /**Features**/
 
@@ -262,11 +300,17 @@ aside .form {
   display:flex;
   justify-content: center;
   align-items: center;
-  flex-flow: word wrap;
+  flex-flow: row wrap;
+}
+
+.features h2 {
+  margin-bottom: 60px;
 }
 
 .features p {
+  text-align: center;
   margin:0;
+  color: #e1e2ea;
 }
 
 
@@ -277,6 +321,10 @@ aside .form {
   justify-content: center;
   flex-flow: row wrap;
 } 
+
+.reviews h2 {
+  margin-bottom: 40px;
+}
 
 .reviews h3 {
   width: 50%;
@@ -299,8 +347,13 @@ aside .form {
   flex-flow: row wrap;
 }
 
+.contact-section h2 {
+  margin-top: 0;
+}
+
 .mission-content p {
-  width: 100%
+  width: 100%;
+  margin: 0;
 }
 
 
@@ -326,10 +379,13 @@ aside .form {
 }
 
 .faq h2 {
-  width: 100%;
+  line-height: 1.2;
   margin-bottom: 40px;
 }
 
+.faq-content h4 {
+  line-height: 1.333;
+}
 /* ==========================================================================
    Helper classes
    ========================================================================== */
@@ -352,16 +408,16 @@ aside .form {
  *    https://medium.com/@jessebeach/beware-smushed-off-screen-accessible-text-5952a4c2cbfe
  */
 
-.sr-only {
+ .visuallyhidden {
   border: 0;
-  clip: rect(0, 0, 0, 0);
+  clip: rect(0 0 0 0);
   height: 1px;
   margin: -1px;
   overflow: hidden;
   padding: 0;
   position: absolute;
-  white-space: nowrap;
   width: 1px;
+  white-space: nowrap;
   /* 1 */
 }
 
@@ -371,16 +427,16 @@ aside .form {
  * https://www.drupal.org/node/897638
  */
 
-.sr-only.focusable:active,
-.sr-only.focusable:focus {
-  clip: auto;
-  height: auto;
-  margin: 0;
-  overflow: visible;
-  position: static;
-  white-space: inherit;
-  width: auto;
-}
+ .visuallyhidden.focusable:active,
+ .visuallyhidden.focusable:focus {
+   clip: auto;
+   height: auto;
+   margin: 0;
+   overflow: visible;
+   position: static;
+   width: auto;
+   white-space: inherit;
+ }
 
 /*
  * Hide visually and from screen readers, but maintain layout
@@ -402,25 +458,37 @@ aside .form {
  *    `:before` to contain the top-margins of child elements.
  */
 
-.clearfix::before,
-.clearfix::after {
-  content: " ";
-  display: table;
-}
-
-.clearfix::after {
-  clear: both;
-}
+ .clearfix:before,
+ .clearfix:after {
+   content: " ";
+   /* 1 */
+   display: table;
+   /* 2 */
+ }
+ 
+ .clearfix:after {
+   clear: both;
+ }
 
 /* ===== Media Queries for Responsive Design.===== */
 
 @media only screen and (min-width: 48em) {
   /**Tablet Styles**/
 
-  /*Styles **/
+  /**Styles **/
   .content-wrapper {
     max-width: 640px;
     margin: 100px 0;
+  }
+
+  h2 {
+    font-size: 2.25em;
+    line-height: 1.25;
+  }
+
+  h3 {
+    font-size: 1.5em;
+    line-height: 1.12;
   }
 
   /**Header**/
@@ -461,6 +529,8 @@ aside .form {
   }
 
   .hero-area h1 {
+    font-size: 3em;
+    line-height: 1;
     margin: 0;
   }
 
@@ -538,7 +608,12 @@ aside .content-wrapper .form {
   }
 
   footer h4 {
-  margin-bottom: 40px;
+    font-size: 1.5em;
+    margin-bottom: 40px;
+  }
+
+  footer p {
+    line-height: 1.2;
   }
 
   footer .social-icons {
@@ -577,6 +652,10 @@ aside .content-wrapper .form {
     align-items: flex-start;
   }
 
+  .contact-content h4 {
+    font-size: 1.5em;
+  }
+
   /**FAQ Page**/
 
   .content-wrapper {
@@ -586,6 +665,16 @@ aside .content-wrapper .form {
   .content {
      flex-basis: 45%;
   }  
+
+  .faq h2 {
+    width: 100%;
+  }
+
+  .faq h4,
+  .faq p {
+    font-size: .875em;
+    line-height: 1.125;
+  }
 
 
   @media only screen and (min-width:1200px) {
@@ -598,9 +687,27 @@ aside .content-wrapper .form {
     .content-wrapper {
       max-width: 960px;
     }
+
+    h2 {
+      font-size: 2.25em;
+    }
+
+    h3 {
+      font-size: 1.875em;
+    }
+
+    h4 {
+      font-size: 1.75em;
+    }
+
+    p{
+      font-size: 1.125em;
+      line-height: 1.333;
+    }
   
     /* Hero */ 
     .hero-area h1 {
+      font-size: 3.75em;
       width: 70%;
   }
   
@@ -613,6 +720,10 @@ aside .content-wrapper .form {
     aside .content-wrapper .form {
       width: 30%;
       margin: 0;
+    }
+
+    .form-description p {
+      font-size: 1.125em;
     }
   
     /* Features */
@@ -673,6 +784,7 @@ aside .content-wrapper .form {
 
     footer h4 {
       margin-bottom: 40px;
+      font-size: 1.875em;
     }
 
     .social-icons {
@@ -690,16 +802,31 @@ aside .content-wrapper .form {
     .mission h2,
     .contact-section .content-wrapper h2 {
         width: 95%;
+        font-size: 3em;
     }
 
     .map figure {
       padding-bottom: 40%;
     }
 
+    .contact-content h4 {
+      font-size: 1.875em;
+    }
+
     
     /* ======FAQ Page===== */
     .faq h2 {
       width: 100%;
+    }
+
+    .faq h4 {
+      font-size: 1.125;
+      line-height: 1;
+    }
+
+    .faq p {
+      font-size: 1em;
+      line-height: 1;
     }
   
   }
